@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { css } from '@emotion/react';
 import './App.css';
+import { Button } from '@material-ui/core';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -10,13 +11,20 @@ function App() {
       <header className="App-header">
         <p
           css={css`
-            color: red;
+            color: yellow;
           `}
         >
           Hello Vite + React!
         </p>
+        <button>hello</button>
         <p>
-          <button onClick={() => setCount((count) => count + 1)}>count is: {count}</button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => setCount((count) => count + 1)}
+          >
+            count is: {count}
+          </Button>
         </p>
       </header>
     </div>

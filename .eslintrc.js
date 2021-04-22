@@ -8,6 +8,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
+    'react-app',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
