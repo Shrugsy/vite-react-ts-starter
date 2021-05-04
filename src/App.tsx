@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { css } from '@emotion/react';
-import './App.css';
 import { Button } from '@material-ui/core';
+
+import { useGetProjectsQuery } from '@/service/api';
+import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  const { data } = useGetProjectsQuery();
 
   return (
     <div className="App">
@@ -16,7 +19,7 @@ function App() {
         >
           Hello Vite + React!
         </p>
-        <button>hello</button>
+        <div>Projects: {JSON.stringify(data)}</div>
         <p>
           <Button
             variant="contained"

@@ -1,11 +1,23 @@
-import React from 'react';
+import { StrictMode } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import { Provider } from 'react-redux';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+import { worker } from '@/_mocks/browser';
+import { store } from '@/store';
+
+import App from './App';
+import './index.css';
+
+async function run() {
+  await worker.start();
+  ReactDOM.render(
+    <StrictMode>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </StrictMode>,
+    document.getElementById('root')
+  );
+}
+
+run();

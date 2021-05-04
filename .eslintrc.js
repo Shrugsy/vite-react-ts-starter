@@ -9,6 +9,9 @@ module.exports = {
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
     'react-app',
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,6 +24,18 @@ module.exports = {
   plugins: ['react', '@typescript-eslint', 'react-hooks', 'prettier'],
   rules: {
     'prettier/prettier': 'error',
+    'react/react-in-jsx-scope': 'off',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
+    'import/no-unresolved': 'off', // watched by typescript instead
+    'import/order': [
+      'error',
+      {
+        groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object'],
+        'newlines-between': 'always',
+      },
+    ],
+  },
+  settings: {
+    'import/internal-regex': '^@/',
   },
 };

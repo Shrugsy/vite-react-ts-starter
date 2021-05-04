@@ -7,3 +7,6 @@ A starter repository with the following included:
 - Eslint
 - Prettier
 - @emotion/react (auto-injected css prop)
+- msw
+- @reduxjs/toolkit
+- react-redux

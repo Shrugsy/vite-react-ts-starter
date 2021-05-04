@@ -19,7 +19,11 @@
     "noUncheckedIndexedAccess": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
-    "jsxImportSource": "@emotion/react"
+    "jsxImportSource": "@emotion/react",
+    "baseUrl": "./src",
+    "paths": {
+      "@/*": ["*"],
+    }
   },
   "include": ["./src"],
   "exclude": [

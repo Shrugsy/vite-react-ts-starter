@@ -10,8 +10,11 @@
   "dependencies": {
     "@emotion/react": "^11.1.5",
     "@material-ui/core": "^4.11.3",
+    "@reduxjs/toolkit": "^1.6.0-alpha.2",
+    "@types/react-redux": "^7.1.16",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "react-redux": "^7.2.4"
   },
   "devDependencies": {
     "@types/react": "^17.0.0",
@@ -23,15 +26,18 @@
     "eslint": "^7.24.0",
     "eslint-config-prettier": "^8.2.0",
     "eslint-config-react-app": "^6.0.0",
-    "eslint-import-resolver-typescript": "^2.4.0",
     "eslint-plugin-flowtype": "^5.7.1",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "msw": "^0.28.2",
     "prettier": "^2.2.1",
     "typescript": "^4.2.4",
     "vite": "^2.1.5"
+  },
+  "msw": {
+    "workerDirectory": "public"
   }
 }
