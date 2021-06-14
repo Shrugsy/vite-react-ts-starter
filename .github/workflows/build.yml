@@ -1,0 +1,29 @@
+name: "build"
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  release:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: 📘 Checkout files
+        uses: actions/checkout@v2.1.1
+      - name: 🟢 Setup Node.js environment
+        uses: actions/setup-node@v2.1.4
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org
+      - name: 📦 Install packages
+        run: npm install
+      - name: 🥽 Run tsc
+        run: npm run typecheck
+      - name: ⚠️ Run tests
+        run: npm run test
+      - name: 🧹 Run eslint
+        run: npm run lint
+      - name: 🏠 Build files
+        run: npm run build
