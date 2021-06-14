@@ -5,7 +5,8 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "test": "jest --watch",
+    "test": "jest",
+    "test-watch": "jest --watch",
     "typecheck": "tsc --noEmit",
     "lint": "eslint ."
   },
