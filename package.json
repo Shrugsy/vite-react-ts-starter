@@ -5,7 +5,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "serve": "vite preview",
-    "typecheck": "tsc --noEmit"
+    "test": "jest --watch",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@emotion/react": "^11.1.5",
@@ -17,6 +19,9 @@
     "react-redux": "^7.2.4"
   },
   "devDependencies": {
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^13.1.9",
+    "@types/jest": "^26.0.23",
     "@types/react": "^17.0.0",
     "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.22.0",
@@ -32,10 +37,13 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.23.2",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "jest": "^27.0.4",
     "msw": "^0.28.2",
     "prettier": "^2.2.1",
+    "ts-jest": "^27.0.3",
     "typescript": "^4.2.4",
-    "vite": "^2.1.5"
+    "vite": "^2.1.5",
+    "whatwg-fetch": "^3.6.2"
   },
   "msw": {
     "workerDirectory": "public"
