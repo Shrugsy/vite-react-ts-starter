@@ -1,5 +1,7 @@
 name: "build"
 
+on: push
+
 jobs:
   release:
     name: build
