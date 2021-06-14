@@ -1,10 +1,5 @@
 name: "build"
 
-on:
-  push:
-    branches:
-      - master
-
 jobs:
   release:
     name: build
