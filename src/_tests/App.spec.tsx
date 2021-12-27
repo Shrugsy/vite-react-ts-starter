@@ -1,7 +1,9 @@
+/** @jsx jsx */
+import { jsx } from '@emotion/react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
-import React, { StrictMode } from 'react';
+import { StrictMode } from 'react';
 
 import { setUpStore } from '@/service/store';
 import { createHandlers } from '@/_mocks/handlers';
