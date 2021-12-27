@@ -1,7 +1,7 @@
 /** @jsx jsx */
 import { useState } from 'react';
 import { css, jsx } from '@emotion/react';
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 
 import { useGetProjectsQuery } from '@/service/api';
 import './App.css';
