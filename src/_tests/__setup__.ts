@@ -1,5 +1,6 @@
-import 'whatwg-fetch';
 import { setupServer } from 'msw/node';
+
+import '@/_mocks/fetchPolyfill';
 
 // leave registering handlers up to individual tests
 export const mswTestServer = setupServer();
