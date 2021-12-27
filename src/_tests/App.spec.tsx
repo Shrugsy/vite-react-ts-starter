@@ -3,7 +3,7 @@ import userEvent from '@testing-library/user-event';
 import { Provider } from 'react-redux';
 import React, { StrictMode } from 'react';
 
-import { setUpStore } from '@/store';
+import { setUpStore } from '@/service/store';
 import { createHandlers } from '@/_mocks/handlers';
 
 import App from '../App';
