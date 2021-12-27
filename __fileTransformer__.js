@@ -8,19 +8,9 @@ module.exports = {
   getCacheKey(fileData, filename, ...rest) {
     const tsJestCacheKey = tsJestTransformer.getCacheKey(fileData, filename, ...rest);
 
-    return createHash('md5')
-      .update(tsJestCacheKey)
-      .update('my custom cache key thing1')
-      .digest('hex');
+    return createHash('md5').update(tsJestCacheKey).digest('hex');
   },
   process(src, filename, config, options) {
-    const transformOne = `
-import { jsx } from '@emotion/react';
-import React from 'react';
-
-${src}`;
-    const transformTwo = tsJestTransformer.process(transformOne, filename, config, options);
-
-    return transformTwo;
+    return tsJestTransformer.process(src, filename, config, options);
   },
 };
