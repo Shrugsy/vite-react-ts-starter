@@ -7,11 +7,12 @@ A starter repository with the following libraries set up and included:
 - Typescript
 - Eslint
 - Prettier
-- @emotion/react (auto-injected css prop)
+- @emotion/react
+- @emotion/styled
 - msw
 - @reduxjs/toolkit
 - react-redux
-- @material-ui/core
+- @mui/material
 - jest
 - @testing-library/react
 
