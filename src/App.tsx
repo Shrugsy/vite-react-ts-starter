@@ -2,18 +2,33 @@
 /** @jsx jsx */
 import { useState } from 'react';
 import { css, jsx } from '@emotion/react';
+import styled from '@emotion/styled';
 import { Button } from '@mui/material';
 
 import { useGetProjectsQuery } from '@/service/api';
-import './App.css';
+
+const AppContainer = styled('div')`
+  text-align: center;
+`;
+
+const AppHeader = styled('header')`
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+`;
 
 function App() {
   const [count, setCount] = useState(0);
   const { data, isFetching, isError, isSuccess, refetch } = useGetProjectsQuery();
 
   return (
-    <div className="App">
-      <header className="App-header">
+    <AppContainer>
+      <AppHeader>
         <p
           css={css`
             color: yellow;
@@ -51,8 +66,8 @@ function App() {
             count is: {count}
           </Button>
         </p>
-      </header>
-    </div>
+      </AppHeader>
+    </AppContainer>
   );
 }
 
