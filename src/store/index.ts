@@ -2,10 +2,12 @@ import { configureStore } from '@reduxjs/toolkit';
 import { setupListeners } from '@reduxjs/toolkit/query';
 
 import { api } from '@/service/api';
+import { messageAlertSlice } from '@/features/messageAlert/messageAlertSlice';
 
 export function setUpStore() {
   const store = configureStore({
     reducer: {
+      messageAlert: messageAlertSlice.reducer,
       [api.reducerPath]: api.reducer,
     },
     middleware: (gDM) => gDM().concat(api.middleware),
