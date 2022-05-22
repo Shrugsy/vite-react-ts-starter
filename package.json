@@ -14,7 +14,7 @@
     "@emotion/react": "^11.7.1",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.2.5",
-    "@reduxjs/toolkit": "^1.7.1",
+    "@reduxjs/toolkit": "^1.8.1",
     "@stordco/msw-toolbar": "^0.2.1",
     "@types/react": "^18.0.9",
     "@types/react-dom": "^18.0.4",
