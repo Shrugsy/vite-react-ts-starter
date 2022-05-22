@@ -3,6 +3,7 @@
 import { jsx } from '@emotion/react';
 import { render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
+import { describe, it } from 'vitest';
 import { Provider } from 'react-redux';
 import { StrictMode } from 'react';
 
@@ -26,6 +27,9 @@ function setUpApp() {
   );
 }
 
+/**
+ * @vitest-environment jsdom
+ */
 describe('App test', () => {
   it('Has a counter', () => {
     // [SETUP] - set up app

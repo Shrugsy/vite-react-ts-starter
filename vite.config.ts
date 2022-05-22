@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
@@ -9,5 +10,9 @@ export default defineConfig({
   },
   resolve: {
     alias: [{ find: '@/', replacement: '/src/' }],
+  },
+  test: {
+    globals: true,
+    setupFiles: './src/_tests/__setup__.ts',
   },
 });
