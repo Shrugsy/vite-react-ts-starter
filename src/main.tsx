@@ -11,7 +11,7 @@ import { store } from '@/store';
 import MessageAlertProvider from '@/features/messageAlert/MessageAlertProvider';
 
 import App from './App';
-import './index.css';
+import { GlobalStyles } from './GlobalStyles';
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -35,7 +35,9 @@ const renderApp = () => {
       <MSWToolbar worker={worker} apiUrl={`${window.location.origin}/api/`} isEnabled={isDev}>
         <Provider store={store}>
           <MessageAlertProvider>
-            <App />
+            <GlobalStyles>
+              <App />
+            </GlobalStyles>
           </MessageAlertProvider>
         </Provider>
       </MSWToolbar>
