@@ -7,7 +7,7 @@ import { describe, it } from 'vitest';
 import { Provider } from 'react-redux';
 import { StrictMode } from 'react';
 
-import { setUpStore } from '@/service/store';
+import { setUpStore } from '@/store';
 import { createHandlers } from '@/_mocks/handlers';
 
 import App from '../App';

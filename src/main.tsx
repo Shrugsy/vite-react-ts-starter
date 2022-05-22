@@ -7,7 +7,7 @@ import { Provider } from 'react-redux';
 import { MSWToolbar } from '@stordco/msw-toolbar';
 import { SetupWorkerApi } from 'msw';
 
-import { store } from '@/service/store';
+import { store } from '@/store';
 
 import App from './App';
 import './index.css';
