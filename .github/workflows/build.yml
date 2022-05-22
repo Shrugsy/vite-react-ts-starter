@@ -10,17 +10,17 @@ jobs:
       - name: 📘 Checkout files
         uses: actions/checkout@v2.1.1
       - name: 🟢 Setup Node.js environment
-        uses: actions/setup-node@v2.1.4
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 16
           registry-url: https://registry.npmjs.org
       - name: 📦 Install packages
-        run: npm install
+        run: yarn install
       - name: 🥽 Run tsc
-        run: npm run typecheck
+        run: yarn typecheck
       - name: ⚠️ Run tests
-        run: npm run test
+        run: yarn test
       - name: 🧹 Run eslint
-        run: npm run lint
+        run: yarn lint
       - name: 🏠 Build files
-        run: npm run build
+        run: yarn build
