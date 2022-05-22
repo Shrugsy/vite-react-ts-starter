@@ -16,3 +16,6 @@ export function setUpStore() {
 }
 
 export const store = setUpStore();
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;
