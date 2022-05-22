@@ -23,36 +23,36 @@ A starter repository with the following libraries set up and included:
 Running in development mode will re-compile and hot-reload on changes.
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ### Run in production mode
 
 ```bash
-npm run build
-npm run serve
+yarn build
+yarn serve
 ```
 
 ### Run tests
 
 ```bash
-npm run test
+yarn test
 ```
 
 In watch mode:
 
 ```bash
-npm run test-watch
+yarn test-watch
 ```
 
 ### Run type checking
 
 ```bash
-npm run typecheck
+yarn typecheck
 ```
 
 ### Run linting
 
 ```
-npm run lint
+yarn lint
 ```
