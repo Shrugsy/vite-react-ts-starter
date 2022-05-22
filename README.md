@@ -13,6 +13,7 @@ A starter repository with the following libraries set up and included:
 - @reduxjs/toolkit
 - react-redux
 - @mui/material
+- notistack
 - vitest
 - @testing-library/react
 

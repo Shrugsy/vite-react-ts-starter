@@ -7,7 +7,8 @@ import { Provider } from 'react-redux';
 import { MSWToolbar } from '@stordco/msw-toolbar';
 import { SetupWorkerApi } from 'msw';
 
-import { store } from '@/service/store';
+import { store } from '@/store';
+import MessageAlertProvider from '@/features/messageAlert/MessageAlertProvider';
 
 import App from './App';
 import './index.css';
@@ -33,7 +34,9 @@ const renderApp = () => {
     <StrictMode>
       <MSWToolbar worker={worker} apiUrl={`${window.location.origin}/api/`} isEnabled={isDev}>
         <Provider store={store}>
-          <App />
+          <MessageAlertProvider>
+            <App />
+          </MessageAlertProvider>
         </Provider>
       </MSWToolbar>
     </StrictMode>
