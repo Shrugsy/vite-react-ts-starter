@@ -1594,6 +1594,11 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
+"@stordco/msw-toolbar@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@stordco/msw-toolbar/-/msw-toolbar-0.2.1.tgz#c8b34ff729904f4c5cc1de3590b5d00b6650a9d3"
+  integrity sha512-ao0WrkZIq0bMhulPG9uABE4yVzgpyhTqlfargBr4rEb3evETectLgwVnsAOOBof9APYTo0HZ+xo4O9N8OJmg3g==
+
 "@testing-library/dom@^8.0.0":
   version "8.13.0"
   resolved "https://registry.yarnpkg.com/@testing-library/dom/-/dom-8.13.0.tgz#bc00bdd64c7d8b40841e27a70211399ad3af46f5"
